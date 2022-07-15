@@ -1,0 +1,265 @@
+/* font-family: 'Open Sans', sans-serif; */
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;/* base para rem o em */
+    line-height: 20px;
+}/* el margen es por defecto y en referencia de 16px para el rem */
+header {
+    background-color: #2e64a1;
+    padding: 16px 0; /* o 1rem o 1em en este caso que serian el mismo padre de 16. el primer parametro es eje y o sea de arriba abajo, el segundo de x derecha izquierda y en 4 parametros es de superior izquierda y como el sentido del reloj */
+}
+header h1 {
+    color: white;
+    size: 40px;
+    font-weight: 100;
+    font-style: italic;
+    display: inline-block;
+    position: relative;
+    bottom: 35px;
+    margin-left: 10px;
+}
+nav { 
+background-color: #6da9ed;
+margin-bottom: 20px;
+}
+nav ul {
+list-style: none;
+margin: 0%;
+padding: 0%;
+display: flex;
+/* justify-content: space-around; */
+
+}
+nav ul li{
+    flex-grow: 1;/* esto especifica el factor de crecimiento en el eje principai, para botoneras */
+    text-align: center;
+}
+nav ul li a {color: white;
+    text-decoration: none;
+    display: block;
+    padding: 3px 6px;
+}
+nav ul li a:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+
+}
+nav ul li a.activo {
+    background-color: #4c76a5;
+}
+footer {
+    background-color: #ccc; /* #cccccc - el sistema asume que el segundo parametro se repite */
+clear: both;
+color: #3333;
+text-align: center;
+padding: 25px;
+margin-top: 20px;
+}
+.holder{
+    width: 960px;
+    margin: 0 auto;
+
+}
+h2 {
+    color: #2e64a1;
+    font-weight: 400;
+}
+/* inicio home */
+
+.bienvenidos {
+    width: 75%;
+    padding-right: 10px;
+}
+.testimonios {
+
+    width: 25%;
+}
+.columnas {
+    display: flex;
+    justify-content: space-between;
+}
+.bienvenidos p{
+    font-size: 20px;
+}
+.testimonio {
+    background-color: #ccc;
+    padding: 16px;
+}
+.testimonio .cita{
+    font-weight: bold;
+    font-style: italic;
+    font-size: 22px;
+    display: block;
+}
+.testimonio .autor {
+    font-size: 10px;
+    display: block;
+  text-align: center;
+  margin: 12px 0;
+    
+}
+/* fin home */
+/*Inicio nosotros*/
+.historia p{
+    font-size: 12px; /* o .8 rem */
+}
+.persona {
+    border: solid #ccc;
+    border-radius: 5px;
+    width: 18%;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.personas {
+    display: flex;
+    justify-content: space-between;
+}
+.persona img {
+    border-radius: 50%;
+    max-width: 60%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5)
+}
+.persona h5, .persona h6 {
+    margin: 0;
+    font-weight: normal;
+    color: #2e64a1;
+}
+.persona h5 {
+    margin-top: 5px;
+    font-size: 14px;
+}
+.persona h6 {
+    font-size: 13px;
+    font-style: italic;
+}
+.persona p{
+    color: #666;
+    font-size: 10px;
+}
+/* fin de nosotros */
+/* inicio de servicios */
+.servicio {
+    border:1px solid #ccc;
+    border-radius: 10px;
+    padding: 13px;
+    margin: 10px 0;
+    display: flex;
+    gap: 32px;
+    align-items: center;
+    
+/* box sizing por ahi sirve mas cuando esta una caja junto a otra. aca al estar una por debajo de la otra no hay  mucha hostoria */
+
+}
+.servicio .info h4 {
+    font-weight: normal;
+    color: #2e64a1;
+font-style: italic;
+border-bottom:1px solid #2e64a1;
+padding-bottom: 7px;
+margin: 10px 0;
+}
+.servicio .info p{
+    font-size: 12px;
+    line-height: 16px;
+    padding: 5px;
+}
+.servicio img{
+    border-radius: 13px;
+    display: block;
+    max-width: 225px;
+}
+.servicio:nth-child(even){
+    /* display: inline-flex; */ /* no hace mucha diferencia y nadie lo puso */
+    flex-direction: row-reverse;
+}
+/* fin servicios */
+/* inicio galeria */
+
+.galeria {
+    /* display:block; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    
+}
+.galeria img {
+    padding: 5px;
+    border: 1px solid #ccc;
+    width: 18%;
+    /* align-items: flex-start; */
+    /* margin: 3px 8px; */
+    margin-right: 2%;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    }
+    /* el espacio que queda al final de la quinta imagen se resuelve con grid: fijate que es y como usarlo */
+/* .galeria img:nth-child(5n+1){
+    border-color: red;
+    
+}
+.galeria img:nth-child(3){
+    background-color: aqua;
+}*/
+/* fijate que no te queda perfectamente alineado a contacto, preguntar en clase */
+/* fin de la galeria */
+/* inicio contacto */
+
+.contacto{
+    display: flex;
+    gap: 50px;
+}
+.contacto div{
+    width: 100%;
+    /* background-color: yellow; */
+}
+
+.datos p{
+    font-size: 14px;
+}
+.datos ul li{
+    font-size: 13px;
+}
+.formulario p label{ 
+    min-width: 80px;
+    display: flex;
+    align-items: center;
+    }
+    /* si yo lo quiero al mismo nivel y con la letra al medio le pongo el display flex el p y luego le pongo en la p label un display flax y un align item center */
+.formulario p:nth-child(4){
+    align-items: flex-start;
+} /* esto es para que la palabrita de mensaje quede arriba y no centrada */
+/* otra solucion es ponerle una clase a la p de mensaje y modificarlo asi en lugar de una pseudoclase. Esto por ahi esta bueno si quiero incorporar mas elementos al formulario */
+.formulario p{
+    display: flex;
+    }
+ /* si se lo saco la palabrita va arriba de la cajita */
+.formulario input, 
+.formulario textarea{
+    width: 100%;
+    border-radius: 5px;
+    background-color: #ddd;
+    border: 1px #999;
+    font-size: 14px;
+    padding: 6px 10px;
+    box-sizing: border-box;
+}
+.formulario textarea{
+    height: 150px;
+    resize: none;
+}
+.formulario input[type="submit"]{
+    background-color: #6da9ed;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+color: white;
+font-size: 16px;
+padding: 6px 20px;
+width: auto;
+position: relative;
+left: 90px;/* estos dos ultimos elementos lo que hacen es mover el enviar a la izquierda, porque estaba al nivel de las palabras */
+cursor: pointer; /* esto para que aparezca la manito del cursor */
+}
+.formulario input[type="submit"]:hover{
+    background-color: #2e64a1;
+}/* esto es para que cambie de color cuando me posiciono sobr el elemento */
+/* fin contacto */
