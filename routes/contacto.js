@@ -34,7 +34,7 @@ var transport = nodemailer.createTransport({
 }) /* finaliza el transport */
 var info = await transport.sendMail(obj);
 res.render('contacto', {
-    message: 'Mensaje enviado correctamente'
+    message: 'Mensaje enviado correctamente', isContacto: true
 })
 })
 
