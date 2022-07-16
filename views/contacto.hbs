@@ -1,25 +1,26 @@
 <div class="contacto"> <div>
             <h2>Contacto Rápido</h2>
-            <form action="" method="" class="formulario">
+            <form action="/contacto" method="post" class="formulario">
                 <p>
                     <label for="">Nombre</label>
-                    <input type="text">
+                    <input type="text" name="nombre">
                 </p>
                 <p>
                     <label for="">email</label>
-                    <input type="email">
+                    <input type="email" name="mail">
                 </p>
                 <p><label for="">Teléfono</label>
-                    <input type="text">
+                    <input type="text" name="telefono">
                 </p>
                 <p>
                     <label for="">Mensaje</label>
-                    <textarea name="" id=""></textarea>
+                    <textarea name="comentario" id=""></textarea>
                 </p>
                 <p>
                     <input type="submit" value="Enviar">
                 </p>
             </form>
+          <p> {{message}}</p> {{!-- ponerlo en una p me da la posibilidad de asignarle una clase y estilo --}}
         </div>
         <div class="datos">
             <h2>Otras vías de comunicación</h2>
