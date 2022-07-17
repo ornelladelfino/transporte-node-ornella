@@ -33,7 +33,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(session({
   secret: 'qwertyuioppoiuytrewq',
-  /* cookie:{MaxAge:null}, */
+  cookie:{MaxAge:null},
   resave: false,
   saveUninitialized: true,
 }))

@@ -20,7 +20,7 @@ var data = await usuariosModel.getUserAndPassword(usuario, password);
 /* select traeria id, usuario y password. en mi caso 1, flavia, 1234 en md5 */
 console.log(data)
 if (data != undefined){
-    req.session.id_usuario = data_id; /* 1 */
+    req.session.id_usuario = data.id; /* 1 */
     req.session.nombre = data.usuario;/* Flavia */
      
     res.redirect('/admin/novedades')
