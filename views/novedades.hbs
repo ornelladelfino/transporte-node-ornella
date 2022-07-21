@@ -1,19 +1,9 @@
  <h2>Novedades</h2>
+      {{#each novedades}}
         <div>
-            <h3>Título 1</h3>
-            <h4>Subtítulo 1</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt eaque libero reiciendis est sapiente consequatur quisquam dignissimos necessitatibus, eos qui excepturi repellat totam velit perferendis! Optio quia harum maiores quidem?</p>
+            <h3>{{titulo}}</h3>
+            <h4>{{subtitulo}}</h4>
+            <p>{{cuerpo}}</p>
             <hr><!-- esto genera una línea, representa un cambio de tema entre párrafos -->
         </div>
-        <div>
-            <h3>Título 2</h3>
-            <h4>Subtítulo 2</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt eaque libero reiciendis est sapiente consequatur quisquam dignissimos necessitatibus, eos qui excepturi repellat totam velit perferendis! Optio quia harum maiores quidem?</p>
-            <hr><!-- esto genera una línea, representa un cambio de tema entre párrafos -->
-        </div>
-        <div>
-            <h3>Título 3</h3>
-            <h4>Subtítulo 3</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt eaque libero reiciendis est sapiente consequatur quisquam dignissimos necessitatibus, eos qui excepturi repellat totam velit perferendis! Optio quia harum maiores quidem?</p>
-            <hr><!-- esto genera una línea, representa un cambio de tema entre párrafos -->
-        </div>
+      {{/each }}
