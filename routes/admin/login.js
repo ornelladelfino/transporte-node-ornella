@@ -9,6 +9,13 @@ router.get('/', function(req, res, next) {
     
 })/* cierro get */
 
+router.get('/logout', function(req, res, next){
+    req.session.destroy(), /* destruye ide, nombre, todo */
+    res.render('admin/login', {
+        layout:'admin/layout'
+    })
+})
+
 router.post('/', async function (req, res, next) {
     try{
 console.log(req.body);
