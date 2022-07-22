@@ -9,8 +9,14 @@
     <div class="col-7">
       <h2>Listado de novedades</h2>
     </div>
-    <div class="col-5">
-      <a href="/admin/novedades/agregar" class="btn btn-success">Nuevo <i class="fa-solid fa-plus"></i></a>
+    <div class="col-2 text-end">
+      <a href=" /admin/novedades/agregar" class="btn btn-success">Nuevo <i class="fa-solid fa-plus"></i></a>
+    </div>
+    <div class="col-3 text-end">
+      <form action="/admin/novedades" method="get" class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search" name="q" {{#if q}}value="{{q}}"{{/if}}>
+        <button class="btn btn-secondary" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+      </form>
     </div>
     <div class="row">
       <div class="col">
@@ -36,6 +42,11 @@
 
           </tbody>
         </table>
+        {{#if is_search}}
+        {{#unless novedades.length}}
+        <p>No se encontraron resultados para <b>{{q}}</b></p>
+        {{/unless}}
+        {{/if}}
       </div>
     </div>
   </div>
